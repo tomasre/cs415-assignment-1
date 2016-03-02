@@ -27,6 +27,17 @@
             for(var i = 0; i < data.length; i++) {
               balance += data[i];
             }
+           // Checks if the file is over
+             os.fs.eof(fh, function(msg, atEof));
+             while(!atEof) {
+               os.fs.read(fh, 100, function(errorReadingFile, data)) {
+                 int_Data = data.split(',');
+                 for(var i = 0; i < int_Data.length; i++) {
+                   result += int_Data[i];
+                 }
+               }
+             }
+            
              os.fs.close(FNAME_IN, function(errorClosingFile, errorMessage)) {
               // output an error message if an error occurs, and stop the process(e?)
               if(errorClosingFile) {
