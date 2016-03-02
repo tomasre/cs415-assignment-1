@@ -38,6 +38,17 @@
             for(var i = 0; i < int_Data.length; i++) {
               result += int_Data[i];
             }
+            
+            // while we are not at the end of the file, keep asking to retrieve 100 numbers.
+            os.fs.eof(fh, function(msg, atEof));
+            while(!atEof) {
+              os.fs.read(fh, 100, function(errorReadingFile, data)) {
+                int_Data = data.split(',');
+                for(var i = 0; i < int_Data.length; i++) {
+                  result += int_Data[i];
+                }
+              }
+            }
             result = result / int_Data.length;
             
             // tell the file system we are done with "Stats_Data.csv" by closing the file
