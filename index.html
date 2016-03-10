@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+dummy os
+
+<!-- still need to do appopriate css to style it look like a terminal -->
+<div class ="terminal">
+  <p>cout << TEXT HERE</p>
+  <form id="form" action="form_action.asp">
+    <input type="text" name="lname"><br>
+  </form>
+</div>
+
+
+<p id ="cL">
+</p>
+
+
+<script>
+function myFunction() {
+    document.getElementById("form").submit();
+}
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/async/1.5.2/async.min.js"></script>
+<script src="os/bios.js"></script>
+<script src="os/os.fs.diskimage.js"></script>
+<script src="os/os.fs.open.js"></script>
+<script src="os/os.fs.read.js"></script>
+<script src="os/os.fs.length.js"></script>
+<script src="os/os.fs.seek.js"></script>
+<script src="os/os.fs.write.js"></script>
+<script src="os/os.ps.registerProcess.js"></script>
+<script src="os/os.ps.scheduler.js"></script>
+<script src="os/os.stream.writeable.js"></script>
+<script src="os/os.driver.display.js"></script>
+<script src="os/os.driver.keyboard.js"></script>
+
+<script src="processes/dummy.js"></script>
+<script src="processes/os.fs.process.js"></script>
+<script src="processes/ContactManager.js"></script>
+<script src="processes/VectorCalculator.js"></script>
+<script src="processes/DeviceDriverTest.js"></script>
+
+
+<!--<script src="processes/Stats.js"></script>-->
+<script src="os/os.ps.init.js"></script>
+</body>
+</html>
